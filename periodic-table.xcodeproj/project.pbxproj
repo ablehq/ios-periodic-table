@@ -14,6 +14,8 @@
 		1D061943233096D300A8054C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D061942233096D300A8054C /* Assets.xcassets */; };
 		1D061946233096D300A8054C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D061945233096D300A8054C /* Preview Assets.xcassets */; };
 		1D061949233096D300A8054C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D061947233096D300A8054C /* LaunchScreen.storyboard */; };
+		1D0619522330994200A8054C /* PeriodicElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0619512330994200A8054C /* PeriodicElement.swift */; };
+		1D0619552330998300A8054C /* PeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0619542330998300A8054C /* PeriodicTableJSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1D061945233096D300A8054C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D061948233096D300A8054C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D06194A233096D300A8054C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D0619512330994200A8054C /* PeriodicElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodicElement.swift; sourceTree = "<group>"; };
+		1D0619542330998300A8054C /* PeriodicTableJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PeriodicTableJSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		1D061938233096D200A8054C /* periodic-table */ = {
 			isa = PBXGroup;
 			children = (
+				1D0619532330997800A8054C /* Resources */,
+				1D0619502330994200A8054C /* Data */,
 				1D061939233096D200A8054C /* AppDelegate.swift */,
 				1D06193B233096D200A8054C /* SceneDelegate.swift */,
 				1D061940233096D200A8054C /* ContentView.swift */,
@@ -76,6 +82,22 @@
 				1D061945233096D300A8054C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1D0619502330994200A8054C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1D0619512330994200A8054C /* PeriodicElement.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1D0619532330997800A8054C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D0619542330998300A8054C /* PeriodicTableJSON.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,7 @@
 				1D061949233096D300A8054C /* LaunchScreen.storyboard in Resources */,
 				1D061946233096D300A8054C /* Preview Assets.xcassets in Resources */,
 				1D061943233096D300A8054C /* Assets.xcassets in Resources */,
+				1D0619552330998300A8054C /* PeriodicTableJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0619522330994200A8054C /* PeriodicElement.swift in Sources */,
 				1D06193F233096D200A8054C /* periodic_table.xcdatamodeld in Sources */,
 				1D06193A233096D200A8054C /* AppDelegate.swift in Sources */,
 				1D061941233096D200A8054C /* ContentView.swift in Sources */,

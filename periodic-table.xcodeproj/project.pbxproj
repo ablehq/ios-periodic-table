@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,11 @@
 		1D061949233096D300A8054C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D061947233096D300A8054C /* LaunchScreen.storyboard */; };
 		1D0619522330994200A8054C /* PeriodicElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0619512330994200A8054C /* PeriodicElement.swift */; };
 		1D0619552330998300A8054C /* PeriodicTableJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0619542330998300A8054C /* PeriodicTableJSON.json */; };
+		1D63A06F23F3CEF900C693BB /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D63A06E23F3CEF900C693BB /* Matrix.swift */; };
+		1D63A07123F3CF2500C693BB /* PeriodicElement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D63A07023F3CF2500C693BB /* PeriodicElement+Extension.swift */; };
+		1D63A07423F407DF00C693BB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D63A07323F407DF00C693BB /* Color+Extension.swift */; };
+		1DD5F2F823FD428F000C7D8E /* ElementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD5F2F723FD428F000C7D8E /* ElementDetailView.swift */; };
+		1DD5F2FB23FD48DC000C7D8E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1DD5F2FA23FD48DC000C7D8E /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,10 @@
 		1D06194A233096D300A8054C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0619512330994200A8054C /* PeriodicElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodicElement.swift; sourceTree = "<group>"; };
 		1D0619542330998300A8054C /* PeriodicTableJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PeriodicTableJSON.json; sourceTree = "<group>"; };
+		1D63A06E23F3CEF900C693BB /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		1D63A07023F3CF2500C693BB /* PeriodicElement+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PeriodicElement+Extension.swift"; sourceTree = "<group>"; };
+		1D63A07323F407DF00C693BB /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		1DD5F2F723FD428F000C7D8E /* ElementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD5F2FB23FD48DC000C7D8E /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 		1D061938233096D200A8054C /* periodic-table */ = {
 			isa = PBXGroup;
 			children = (
+				1DD5F2F623FD427C000C7D8E /* Views */,
+				1D63A07223F407D100C693BB /* Extension */,
 				1D0619532330997800A8054C /* Resources */,
 				1D0619502330994200A8054C /* Data */,
 				1D061939233096D200A8054C /* AppDelegate.swift */,
@@ -88,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				1D0619512330994200A8054C /* PeriodicElement.swift */,
+				1D63A06E23F3CEF900C693BB /* Matrix.swift */,
+				1D63A07023F3CF2500C693BB /* PeriodicElement+Extension.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -98,6 +112,22 @@
 				1D0619542330998300A8054C /* PeriodicTableJSON.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1D63A07223F407D100C693BB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1D63A07323F407DF00C693BB /* Color+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1DD5F2F623FD427C000C7D8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DD5F2F723FD428F000C7D8E /* ElementDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +146,9 @@
 			dependencies = (
 			);
 			name = "periodic-table";
+			packageProductDependencies = (
+				1DD5F2FA23FD48DC000C7D8E /* SDWebImageSwiftUI */,
+			);
 			productName = "periodic-table";
 			productReference = 1D061936233096D200A8054C /* periodic-table.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +177,9 @@
 				Base,
 			);
 			mainGroup = 1D06192D233096D200A8054C;
+			packageReferences = (
+				1DD5F2F923FD48DC000C7D8E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 1D061937233096D200A8054C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,10 +209,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D0619522330994200A8054C /* PeriodicElement.swift in Sources */,
+				1DD5F2F823FD428F000C7D8E /* ElementDetailView.swift in Sources */,
+				1D63A07123F3CF2500C693BB /* PeriodicElement+Extension.swift in Sources */,
 				1D06193F233096D200A8054C /* periodic_table.xcdatamodeld in Sources */,
+				1D63A06F23F3CEF900C693BB /* Matrix.swift in Sources */,
 				1D06193A233096D200A8054C /* AppDelegate.swift in Sources */,
 				1D061941233096D200A8054C /* ContentView.swift in Sources */,
 				1D06193C233096D200A8054C /* SceneDelegate.swift in Sources */,
+				1D63A07423F407DF00C693BB /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1DD5F2F923FD48DC000C7D8E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = exactVersion;
+				version = "1.0.0-beta2";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DD5F2FA23FD48DC000C7D8E /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DD5F2F923FD48DC000C7D8E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1D06193D233096D200A8054C /* periodic_table.xcdatamodeld */ = {

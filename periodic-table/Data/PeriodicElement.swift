@@ -20,7 +20,7 @@ import Foundation
 
 // MARK: - PeriodicElementList
 struct PeriodicElementList: Codable, Equatable {
-  let elements: [Element]
+  var elements: [Element]
 }
 
 // MARK: PeriodicElementList convenience initializers and mutators
@@ -81,13 +81,13 @@ extension PeriodicElementList {
 // synthesized for types that have collections (such as arrays or dictionaries).
 
 // MARK: - Element
-struct Element: Codable, Equatable {
+struct Element: Codable, Equatable, Hashable {
   let name: String
   let appearance: String?
   let atomicMass: Double
   let boil: Double?
   let category: String
-  let color: String?
+  var color: String?
   let density: Double?
   let discoveredBy: String?
   let melt, molarHeat: Double?
@@ -124,6 +124,7 @@ struct Element: Codable, Equatable {
 // MARK: Element convenience initializers and mutators
 
 extension Element {
+
   init(data: Data) throws {
     self = try newJSONDecoder().decode(Element.self, from: data)
   }
